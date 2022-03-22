@@ -1,0 +1,56 @@
+<div>
+    <h1 class="display-3" >The Validator</h1>
+    <form>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="" class="col-form-label">State</label>
+            </div>
+            <div class="col-auto">
+                <select class="form-select" name="state" [(ngModel)]="valueData.state" aria-label="Default select example">
+                    <option value="all" selected>All</option>
+                    <option value="valid">Valid</option>
+                    <option value="invalid">Invalid</option>
+                  </select>
+            </div>
+            <div class="col-auto">
+                <label for="" class="col-form-label">Country</label>
+            </div>
+            <div class="col-auto">
+                <select class="form-select" [(ngModel)]="valueData.country" name="country" aria-label="Default select example">
+                    <option value ="all" selected>All</option>
+                    <option value="cameroon">Cameroon</option>
+                    <option value="ethiopia">Ethiopia</option>
+                    <option value="morocco">Morocco</option>
+                    <option value="mozambique">Mozambique</option>
+                    <option value="uganda">Uganda</option>
+                  </select>
+            </div>
+            <div class="col-auto">
+                <button type="button" (click)="filterData()" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Country Code</th>
+                <th scope="col">Country</th>
+                <th scope="col">State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of customerList; let i = index">
+                <td>{{ i+1 }}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.phone }}</td>
+                <td>{{c.countryCode}}</td>
+                <td>{{c.country}}</td>
+                <td>{{c.valid}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
