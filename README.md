@@ -8,6 +8,6 @@
 - [x] docker run -p8080:8080 validator:latest
 - [x] run the client
 - [x] cd validator-app/validator-client 
+- [x] npm install
 - [x] ng serve
 - [x] Navigate to http://localhost:4200/
-- 
