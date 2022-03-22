@@ -47,7 +47,7 @@ public class CustomerService {
                 responses.add(customerResponse);
                 continue;
             }
-            if (customerResponse.isValid() == isValid && customerResponse.getCountry().equalsIgnoreCase("all")){
+            if (customerResponse.isValid() == isValid && country.equalsIgnoreCase("all")){
                 responses.add(customerResponse);
                 continue;
             }
